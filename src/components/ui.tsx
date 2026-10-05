@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { services, type Service } from '@/lib/data'
-export const bg = (img: string) => ({ backgroundImage: `url(/img/${img}.jpg)` })
+import { services, unsplash, type Service } from '@/lib/data'
+export const photo = (img: string) => (unsplash[img] ? `url(https://unsplash.com/photos/${unsplash[img]}/download?force=true&w=1600), ` : '') + `url(/img/${img}.jpg)`
+export const bg = (img: string) => ({ backgroundImage: photo(img) })
 export function PageHero({ title, sub, img, tag = 'IGOCHE OIL & GAS' }: { title: string; sub: string; img: string; tag?: string }) {
   return (
     <div className="ph" style={bg(img)}>
@@ -12,7 +13,7 @@ export function PageHero({ title, sub, img, tag = 'IGOCHE OIL & GAS' }: { title:
 export function ServiceCard({ s, base, label }: { s: Service; base: string; label: string }) {
   return (
     <div className="card">
-      <div className="im"><Image src={`/img/${s.slug}.jpg`} alt={s.name} width={640} height={420} /></div>
+      <div className="im"><div className="pic" role="img" aria-label={s.name} style={bg(s.slug)} /></div>
       <div className="bd"><h3>{s.icon} {s.name}</h3><p>{s.desc}</p><Link className="btn" href={`${base}/${s.slug}`}>{label}</Link></div>
     </div>
   )

@@ -12,5 +12,7 @@ export const services:Service[]=[
 export const site={name:'IGOCHE OIL & GAS NIG. LTD.',rc:'1761904',phones:['08037549736','08022925330','08094783639','08058090569'],phone:'08037549736',wa:'2348052032160',waDisplay:'08052032160',email:'igocheoilandgasnigerialtd2202@gmail.com',address:'16, Water Co-operation Drive, Opposite Landmark, Victoria Island, Lagos State',md:'Igoche Sunday',role:'Managing Director',tagline:'Supplier of Petroleum Products, Sales, Marketing & General Contractor'}
 export const handle='igocheoilandgasnigltd'
 export const socials:[string,string,string][]=[['📸','Instagram',`https://instagram.com/${handle}`],['📘','Facebook',`https://facebook.com/${handle}`],['💬','WhatsApp',`https://wa.me/${site.wa}`]]
+// Free-licence Unsplash photos (photo page IDs). Each falls back to the local /public/img/<slug>.jpg if offline/blocked.
+export const unsplash:Record<string,string>={'tanker-haulage':'CY4ce8XOLHo','petroleum-products':'O2XbR4lXhDM','diesel-supply':'kInJXRQVOss'}
 export const bySlug=(s:string)=>services.find(x=>x.slug===s)!
 export const NAV:[string,string][]=[['/','Home'],['/about','About'],['/services','Services'],['/packages','Packages'],['/contact','Contact']]

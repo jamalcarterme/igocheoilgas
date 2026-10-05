@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <video autoPlay muted loop playsInline poster="/img/oil-gas.jpg"><source src="/video/hero.mp4" type="video/mp4" /></video>
+        <video autoPlay muted loop playsInline preload="auto" poster="/img/oil-gas.jpg"><source src="/video/hero.mp4" type="video/mp4" /></video>
         <div className="ov" />
         <div className="in">
           <span className="tag rv" style={{ color: 'var(--gold)' }}>IGOCHE OIL &amp; GAS NIG. LTD. · RC {site.rc}</span>
@@ -31,6 +31,12 @@ export default function Home() {
         <div className="split">
           <div className="rv l"><span className="tag">About us</span><h2>Fuel you can trust.</h2><p className="mb-5 opacity-85">Igoche Oil &amp; Gas Nig. Ltd. is a Victoria Island, Lagos based supplier of petroleum products, sales, marketing and general contractor, led by Managing Director {site.md}. We deliver tested and trusted diesel with a personalized approach.</p><Link className="btn" href="/about">Read our story</Link></div>
           <div className="rv r"><Vcols /></div>
+        </div>
+      </section>
+      <section className="cr">
+        <div className="split">
+          <div className="rv l"><span className="tag">See us in action</span><h2>Meet the Igoche team</h2><p className="mb-5 opacity-85">Watch a short video about Igoche Oil &amp; Gas: tested and trusted diesel, delivered with a personalized approach, in Victoria Island and across Lagos.</p><Link className="btn" href="/get-quote">Request a Quote</Link> <Link className="btn b" href="/contact">Talk to us</Link></div>
+          <div className="rv r"><div className="vid"><video controls playsInline preload="metadata" poster="/img/intro-poster.jpg"><source src="/video/intro.mp4" type="video/mp4" /></video></div></div>
         </div>
       </section>
       <div className="tri-d" />
