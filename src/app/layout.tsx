@@ -1,3 +1,4 @@
+import Icon from '@/components/Icon'
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
 import Image from 'next/image'
@@ -10,7 +11,7 @@ const body = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'],
 const head = Playfair_Display({ subsets: ['latin'], weight: ['600', '800'], style: ['normal', 'italic'], variable: '--f-head' })
 export const metadata: Metadata = {
   title: { default: 'Igoche Oil & Gas Nig. Ltd. | High Quality Diesel, Victoria Island Lagos', template: '%s | Igoche Oil & Gas' },
-  description: 'Igoche Oil & Gas Nig. Ltd. (RC 1761904): supplier of petroleum products, high quality tested diesel, lubricants, tanker delivery, sales, marketing and general contracting in Lagos.',
+  description: 'Igoche Oil & Gas Nig. Ltd. (RC 1761904): supplier of petroleum products, high quality tested diesel supplied to hotels, restaurants, companies, estates and residents, lubricants, tanker delivery, sales, marketing and general contracting in Lagos.',
 }
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <a id="wa" href={`https://wa.me/${site.wa}`} target="_blank" rel="noreferrer">💬 Chat with us</a>
+        <a id="wa" href={`https://wa.me/${site.wa}`} target="_blank" rel="noreferrer"><Icon name="whatsapp" size={20} /> Chat with us</a>
         <Effects />
       </body>
     </html>

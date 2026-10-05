@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { services, site } from '@/lib/data'
-import { ServiceCard, Vcols, bg } from '@/components/ui'
+import { ServiceCard, Vcols, Clients, bg } from '@/components/ui'
 import Slider from '@/components/Slider'
 import Typewriter from '@/components/Typewriter'
 const values = ['Trust', 'Patience', 'Integrity', 'Passion for our customer']
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="in">
           <span className="tag rv" style={{ color: 'var(--gold)' }}>IGOCHE OIL &amp; GAS NIG. LTD. · RC {site.rc}</span>
           <Typewriter words={services.map(s => s.name)} />
-          <p className="s rv d2">High quality diesel with the best price. Our diesel is tested and trusted.</p>
+          <p className="s rv d2">High quality diesel with the best price, supplied to hotels, restaurants, companies, estates and residents.</p>
           <div className="rv d3"><Link className="btn" href="/get-quote">Get a Free Quote</Link><Link className="btn o" href="/services">Our Services</Link></div>
         </div>
         <Image className="hshape hex" src="/img/diesel-supply.jpg" alt="" width={260} height={300} />
@@ -26,6 +26,7 @@ export default function Home() {
       <section className="cr">
         <div className="text-center"><span className="tag rv">What we do</span><h2 className="rv d1">Pick a service</h2><p className="lead rv d2">Tap any service to see details, packages and request a quote.</p></div>
         <Slider>{services.map(s => <ServiceCard key={s.slug} s={s} base="/services" label="Learn more →" />)}</Slider>
+        <Clients />
       </section>
       <section className="dk cl">
         <div className="split">

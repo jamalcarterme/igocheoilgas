@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { services, unsplash, type Service } from '@/lib/data'
+import { services, unsplash, clients, type Service } from '@/lib/data'
 export const photo = (img: string) => (unsplash[img] ? `url(https://unsplash.com/photos/${unsplash[img]}/download?force=true&w=1600), ` : '') + `url(/img/${img}.jpg)`
 export const bg = (img: string) => ({ backgroundImage: photo(img) })
 export function PageHero({ title, sub, img, tag = 'IGOCHE OIL & GAS' }: { title: string; sub: string; img: string; tag?: string }) {
@@ -37,6 +37,15 @@ export function Tiers({ s, label }: { s: Service; label: string }) {
           <Link className={`btn ${i === 1 ? 'b' : ''}`} href={`/get-quote/${s.slug}?pkg=${encodeURIComponent(t.name)}`}>{label}</Link>
         </div>
       ))}
+    </div>
+  )
+}
+
+export function Clients() {
+  return (
+    <div className="mt-10">
+      <div className="text-center"><span className="tag rv">Who we supply</span><h2 className="rv d1">Diesel for every need</h2><p className="lead rv d2">We supply diesel to hotels, restaurants, companies, estates, residents and more.</p></div>
+      <div className="gx mt-6">{clients.map(([i, t], k) => <div key={t} className={`wy rv d${k % 4}`}><i>{i}</i><h3>{t}</h3></div>)}</div>
     </div>
   )
 }

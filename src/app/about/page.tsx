@@ -8,7 +8,7 @@ export default function About() {
       <PageHero title="About Igoche Oil & Gas" sub="Our diesel is tested and trusted" img="oil-gas" tag="ABOUT US" />
       <section className="cr"><div className="split">
         <div className="rv l"><span className="tag">Our story</span><h2>A personalized approach to quality supply</h2>
-          <p className="mb-4">Igoche Oil &amp; Gas Nig. Ltd. is a registered Nigerian company (RC: {site.rc}) based in Victoria Island, Lagos. We are a supplier of petroleum products, sales, marketing and general contractor, known for high quality diesel at the best price.</p>
+          <p className="mb-4">Igoche Oil &amp; Gas Nig. Ltd. is a registered Nigerian company (RC: {site.rc}) based in Victoria Island, Lagos. We are a supplier of petroleum products, sales, marketing and general contractor, known for high quality diesel at the best price. We supply diesel to hotels, restaurants, companies, estates, residents and more.</p>
           <p className="mb-2"><b>{site.role}:</b> {site.md}</p><p className="mb-5"><b>RC Number:</b> {site.rc}</p><Link className="btn" href="/services">See services</Link></div>
         <div className="rv r"><Vcols /></div>
       </div></section>
